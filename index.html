@@ -7,6 +7,8 @@
     <title>Grupo Loal</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/c95a79cff5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
+    <script src="@splidejs/splide/dist/js/splide.min.js"></script>
 </head>
 <body>
     <div class="hero">
@@ -167,9 +169,29 @@
         <div class="section-title house-dec">
             <h2>Nuestros últimos proyectos</h2>
         </div>
-        <div class="slider">
-            <div class="slider-frame"></div>
-        </div>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slide-title">Reforma de baño</div>
+                            <img src="img/original/bathroom-slider.jpg" alt="Bathroom Slider">
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-title">Reforma de cocina</div>
+                            <img src="img/original/cocina-slider.jpg" alt="Cocina Slider">
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-title">Reforma de habitación</div>
+                            <img src="img/original/room-slider.jpg" alt="Room Slider">
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="splide__progress">
+                    <div class="splide__progress__bar">
+                    </div>
+                </div>
+            </div>
         <div class="mid-btn">
             <div class="btn btn-primario dark"><a href="#">pide presupuesto</a></div>
         </div>
@@ -326,6 +348,7 @@
             </ul>
         </div>
     </section>
+
     <section class="light">
         <div class="section-title">
             <h2>¿Dudas?¿Sugerencias?</h2>
@@ -419,5 +442,7 @@
         </div>
 
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
