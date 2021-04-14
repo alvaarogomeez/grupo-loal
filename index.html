@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo Loal</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/c95a79cff5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="hero">
@@ -316,12 +317,12 @@
         </div>
         <div class="brands container">
             <ul class="brands-list">
-                <li class="brand-1"><img src="img/original/PWA.png" alt="PWA Logo"></li>
-                <li class="brand-2"><img src="img/original/npm-logo.png" alt="NPM Logo"></li>
-                <li class="brand-3"><img src="img/original/VM-logo.png" alt="VM Logo"></li>
-                <li class="brand-4"><img src="img/original/-d.png" alt="D Logo"></li>
-                <li class="brand-5"><img src="img/original/PWA.png" alt="PWA Logo"></li>
-                <li class="brand-6"><img src="img/original/-d.png" alt="D Logo"></li>
+                <li class="brand brand-1"><img src="img/original/PWA.png" alt="PWA Logo"></li>
+                <li class="brand brand-2"><img src="img/original/npm-logo.png" alt="NPM Logo"></li>
+                <li class="brand brand-3"><img src="img/original/VM-logo.png" alt="VM Logo"></li>
+                <li class="brand brand-4 short"><img src="img/original/-d.png" alt="D Logo"></li>
+                <li class="brand brand-5"><img src="img/original/PWA.png" alt="PWA Logo"></li>
+                <li class="brand brand-6 short"><img src="img/original/-d.png" alt="D Logo"></li>
             </ul>
         </div>
     </section>
@@ -331,8 +332,22 @@
         </div>
         <div class="section-content contact-form container">
             <div class="left-side-section form">
-                <form action="#">
-
+                <form id="dudas-y-sugerencias" class="dudas-y-sugerencias" action="#" method="post">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="asunto">Asunto</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-control">
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                    </div>
                 </form>
             </div>
             <div class="right-side-section img">
@@ -342,7 +357,66 @@
     </section>
 
     <footer class="site-footer">
-        <p>Made by <a href="#">WanWeb</a></p>
+        <div class="content-footer container">
+            <div class="section-footer contacto-footer">
+                <div class="logo-footer">
+                    <a href="#"><img src="img/svg/LOGOLOALBlancoWEB.svg" alt="Logo Loal"></a>
+                </div>
+                <nav class="section-content-footer">
+                    <a href="#">(4321) 0987-654-321</a>
+                    <a href="#">info@grupoloal.com</a>
+                    <a href="#">123Park, Madrid</a>
+                </nav>
+            </div>
+
+            <div class="section-footer menu-footer">
+                <div class="section-title-footer">Menú</div>
+                <nav class="section-content-footer">
+                    <a href="#">Sobre Nosotros</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Galería de trabajos</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </div>
+            <div class="section-footer legal-footer">
+                <div class="section-title-footer">Legal</div>
+                <nav class="section-content-footer">
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                </nav>
+            </div>
+            <div class="section-footer social-media-footer">
+                <div class="section-title-footer">Síguenos</div>
+                <ul class="social-media-list">
+                    <li class="social-media">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <div class="btn-neumorphism social-btn fb-btn"></div>
+                        </a> 
+                    </li>
+                    <li class="social-media">
+                        <a href="https://twitter.com/" target="_blank">
+                            <div class="btn-neumorphism social-btn twitter-btn"></div>
+                        </a> 
+                    </li>
+                    <li class="social-media">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <div class="btn-neumorphism social-btn insta-btn"></div>
+                        </a> 
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="copyright-separator">
+        <div class="footer-disclaimer">
+            <p class="copyright"><span>Developed by &nbsp</span><a href="https://www.fiverr.com/alvaarogomeez?public_mode=true" target="_blank">WanWeb &copy</a></p>
+            <p style="color: var(--colorPrimario)" class="disclaimer-separator">&nbsp | &nbsp</p>
+            <p class="legal-terms">
+                <a href="#">Términos y Política de privacidad</a>
+            </p>
+        </div>
 
     </footer>
 </body>
