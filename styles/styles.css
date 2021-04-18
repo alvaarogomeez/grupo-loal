@@ -28,7 +28,7 @@ body{
     background-color: var(--grisFondo);
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden!important;
 }
 img{
     width: 100%;
@@ -223,7 +223,8 @@ div.hero-description{
 div.section-title{
     max-width: 40%;
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 div.section-title h2{
     font-size: 36px;
@@ -246,7 +247,7 @@ div.section-title.house-dec::before{
 div.section-subtitle{
     max-width: 25%;
     margin: 0 auto;
-    padding: 2.5rem 0;
+    margin-bottom: 1.5rem;
 }
 div.section-subtitle p{
     font-size: 14px;
@@ -283,11 +284,6 @@ div.section-content.why{
     position: relative;
     display: flex;
 }
-div.section-content.about-us{
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-}
 div.left-side-section{
     flex: 0 1 calc(37% - 1rem);
 }
@@ -314,7 +310,7 @@ div.section-description{
     padding-bottom: 9rem;
 }
 div.right-side-section{
-    flex: 0 1 calc(50% - 1rem);
+    flex: 0 1 calc(100% - 1rem);
 }
 div.right-side-section.img{
     max-width: 75%;
@@ -367,7 +363,7 @@ div.intro-info-card div.title-card h3{
     text-transform: uppercase;
 }
 div.subtitle-card{
-    max-width: 60%;
+    max-width: 70%;
     line-height: 1.8;
     padding-bottom: 2rem;
 }
@@ -452,57 +448,243 @@ li.splide__slide::before{
     height: 75px;
     background-color: rgba(0,0,0,.5);
 }
+/** SOBRE NOSOTROS **/
+div.section-content.about-us {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+div.left-side-section.img {
+    display: none;
+}
+div.section-content.about-us div.right-side-section p{
+    font-size: 17px
+}
+@media only screen and (min-width: 480px)
+{
+    div.section-content.about-us div.right-side-section p {
+        font-size: 18px
+    }
+}
+@media only screen and (min-width: 1024px) {
+    div.section-content.about-us div.right-side-section p {
+        font-size: 19px
+    }
+}
+div.section-content.about-us div.section-title {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1024px)
+{
+    div.left-side-section.img {
+        display: block;
+        left: 0;
+        top: 20%;
+        max-width: 50%;
+    }
+    div.right-side-section {
+        flex: 0 1 calc(45% - 1rem);
+    }
+    div.section-content.about-us {
+        justify-content: flex-end;
+    }
+    div.section-content.about-us div.section-title {
+        max-width: 90%;
+    }
+}
+@media only screen and (min-width: 1280px) {
+   
+    div.left-side-section.img {
+        left: 0;
+        top: 18%;
+        max-width: 50%;
+    }  
+}
 /* Lema */
+div.lema div.lema-wrapper {
+    max-width: 65%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 320px) {
+    div.lema div.lema-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    div.lema div.lema-wrapper {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    div.lema div.lema-wrapper {
+        max-width: 60%;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    div.lema div.lema-wrapper {
+        max-width: 95%;
+    }
+}
 div.lema p{
     font-size: 22px;
     text-align: left;
     font-weight: 700;
 }
 div.lema blockquote{
-    font-size: 28px;
+    font-size: 18px;
     font-family: var(--fuenteEspecial);
     text-transform: uppercase;
     text-align: center;
     position: relative;
 }
-div.lema blockquote::before{
+@media only screen and (min-width: 480px) 
+{
+    div.lema blockquote {
+        font-size: 21px;
+    }
+}
+@media only screen and (min-width: 768px) 
+{
+    div.lema blockquote {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 1024px) 
+{
+    div.lema blockquote {
+        font-size: 21px;
+    }
+
+}
+@media only screen and (min-width: 1128px)
+{
+    div.lema blockquote {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 1280px) 
+{
+    div.lema blockquote {
+        font-size: 28px;
+    }
+
+}
+div.lema blockquote span {
+    position: relative;
+}
+div.lema blockquote span.first-word::before {
     content: url(../img/svg/opening-quote.svg);
     position: absolute;
-    top: -5%;
-    left: -3%;
+    top: -30%;
+    left: -80%;
+    transform: scale(.68);
 }
-div.lema blockquote::after{
+div.lema blockquote span.last-word::after {
     content: url(../img/svg/closing-quote.svg);
     position: absolute;
-    bottom: 5%;
-    right: 20%;
+    top: -35%;
+    right: -25%;
+    transform: scale(.68);
 }
-div.lema div.lema-wrapper{
-    max-width: 95%;
-    margin: 0 auto;
-}
+@media only screen and (min-width: 480px)
+{
+    div.lema blockquote span.first-word::before {
+        transform: scale(.75);
+    }
 
+    div.lema blockquote span.last-word::after {
+        transform: scale(.75);
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    div.lema blockquote span.first-word::before {
+        transform: scale(.8);
+    }
+
+    div.lema blockquote span.last-word::after {
+        transform: scale(.8);
+    }
+}
+@media only screen and (min-width: 1280px)
+{
+    div.lema blockquote span.first-word::before {
+        transform: scale(1);
+    }
+
+    div.lema blockquote span.last-word::after {
+        transform: scale(1);
+    }
+}
 /** REVIEWS **/
 div.reviews{
-    padding: 5rem 0 3rem 0;
-    max-width: 90%;
+    padding: 2rem 0 3rem 0;
+    max-width: 100%;
     margin: 0 auto;
 }
 div.reviews ul.reviews-list{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+}
+@media only screen and (min-width: 480px)
+{
+    div.reviews {
+        max-width: 75%;
+    }
+}
+@media only screen and (min-width: 600px)
+{
+    div.reviews {
+        max-width: 65%;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    div.reviews {
+        max-width: 50%;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    div.reviews {
+        max-width: 100%;
+    }
+    div.reviews ul.reviews-list{
+        flex-direction: row;
+    }
 }
 ul.reviews-list li{
     display: inline-block;
-    flex: 0 1 calc(29% - 1rem);
     transition: all .3s ease;
-    background-color: white;
-    -webkit-box-shadow: 25px 25px 20px -21px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 25px 25px 20px -21px rgba(0, 0, 0, .3);
-    box-shadow: 25px 25px 20px -21px rgba(0, 0, 0, .3);
+    background-color: #fff;
+    /* -webkit-box-shadow: 
+            25px 25px 20px -21px rgba(0, 0, 0, .3),
+            -25px 25px 20px -27px rgba(6, 179, 185, 0.53); 
+        -moz-box-shadow: 
+            25px 25px 20px -21px rgba(0, 0, 0, .3),
+            -25px 25px 20px -27px rgba(6, 179, 185, 0.53); 
+        box-shadow: 
+            25px 25px 20px -21px rgba(0, 0, 0, .3),
+            -25px 25px 20px -27px rgba(6, 179, 185, 0.53); */
     -webkit-box-shadow: -25px 25px 20px -27px rgba(6, 179, 185, 0.53);
     -moz-box-shadow: -25px 25px 20px -27px rgba(6, 179, 185, 0.53);
     box-shadow: -25px 25px 20px -27px rgba(6, 179, 185, 0.53);
+    margin-bottom: 3rem;
+}
+@media only screen and (min-width: 1024px)
+{
+    ul.reviews-list li {
+        flex: 0 1 calc(29% - 1rem);
+        margin-bottom: 0;
+    }
 }
 ul.reviews-list li:hover{
     transform: scale(1.1);
@@ -511,16 +693,28 @@ ul.reviews-list li:hover{
     box-shadow: 25px 25px 20px -21px rgba(0, 0, 0, .3);
 }
 ul.reviews-list li.review-2{
-    transform: translateY(20px);
+    transform: translateY(0px);
+}
+@media only screen and (min-width: 1024px)
+{
+    ul.reviews-list li.review-2 {
+        transform: translateY(20px);
+    }
 }
 ul.reviews-list li.review-2:hover{
     transform: scale(1.1);
 }
 div.thumbnail-review img{
     width: 100%;
-    max-height: 144px;
-    min-height: 144px;
-
+    max-height: 200px;
+    min-height: 200px;
+}
+@media only screen and (min-width: 1024px)
+{
+    div.thumbnail-review img {
+        max-height: 144px;
+        min-height: 144px;
+    }
 }
 div.rating-review{
     display: flex;
@@ -528,8 +722,32 @@ div.rating-review{
     padding: 1rem 0;
 }
 div.rating-review img{
-    flex: 0 1 calc(18% - .5rem);
+    flex: 0 1 calc(17% - 1rem);
     padding: 0 .5rem;
+}
+@media only screen and (min-width: 480px)
+{
+    div.rating-review img {
+        flex: 0 1 calc(16.5% - .5rem);
+    }
+}
+@media only screen and (min-width: 600px)
+{
+    div.rating-review img {
+        flex: 0 1 calc(15% - .5rem);
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    div.rating-review img {
+        flex: 0 1 calc(16% - 1rem);
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    div.rating-review img {
+        flex: 0 1 calc(18% - .5rem);
+    }
 }
 div.review-excerpt blockquote{
     display: flex;
@@ -544,6 +762,30 @@ div.review-excerpt blockquote p.comment-review{
     font-family: var(--fuenteSecundaria);
     line-height: 1.8;
     font-style: italic;
+}
+@media only screen and (min-width: 480px) 
+{
+    div.review-excerpt blockquote {
+        max-width: 75%;
+    }
+}
+@media only screen and (min-width: 768px) 
+{
+    div.review-excerpt blockquote {
+        max-width: 80%;
+    }
+    div.review-excerpt blockquote p.comment-review {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    div.review-excerpt blockquote {
+        max-width: 90%;
+    }
+    div.review-excerpt blockquote p.comment-review {
+        font-size: 16px;
+    }
 }
 footer.info-review{
     margin-top: 1.5rem;
@@ -727,12 +969,17 @@ textarea:required {
 }
 
 .container .formBx {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+@media only screen and (min-width: 468px)
+{
+    .container .formBx {
+        width: 50%;
+    }
+}
 .container .formBx form {
     position: relative;
     width: 100%;
@@ -830,9 +1077,10 @@ div.container div.formBx form div.inputBox textarea:valid{
 }
 .container .imgBx {
     position: relative;
+    display: block;
     width: 50%;
     height: 100%;
-    overflow: hidden;
+    background-color: var(--colorPrimario);
 }
 
 .container .imgBx:before {
