@@ -1278,7 +1278,7 @@ div.container div.formBx form div.inputBox textarea:valid{
 }
 
 /*** FORMULARIO PIDE PRESUPUESTO ***/
-/* div.main-form{
+div.main-form{
     min-height: 90vh;
     max-height: 90vh;
     max-width: 90%;
@@ -1372,4 +1372,4 @@ div.description-form input.envio-main-form:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 5px var(--colorPrimario);
     cursor: pointer;
-} */
+}
