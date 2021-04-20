@@ -74,7 +74,14 @@ h1{
     letter-spacing: 1.3px;
     font-weight: 700;
     font-size: 14px;
-}.btn-primario.dark a{
+}
+.btn-primario p {
+    color: #fff;
+}
+.btn-primario.dark a{
+    color: #000;
+}
+.btn-primario.dark p {
     color: #000;
 }
 .btn-primario:hover{
@@ -83,6 +90,9 @@ h1{
     cursor: pointer;
 }
 .btn-primario:hover a{
+    color: var(--colorPrimario);
+}
+.btn-primario:hover p {
     color: var(--colorPrimario);
 }
 .btn-secundario{
@@ -94,6 +104,9 @@ h1{
     font-size: 18px;
 }
 .btn-secundario a{
+    color: #000;
+}
+.btn-secundario p {
     color: #000;
 }
 .btn-secundario:hover{
@@ -280,12 +293,8 @@ section.dark{
 section.dark.no-bottom {
     border-bottom: none;
 }
-div.section-content.why{
-    position: relative;
-    display: flex;
-}
 div.left-side-section{
-    flex: 0 1 calc(37% - 1rem);
+    flex: 0 1 calc(100% - 1rem);
 }
 div.left-side-section.img{
     max-width: 45%;
@@ -294,13 +303,24 @@ div.left-side-section.img{
     left: 0;
 }
 div.left-side-section div.section-title{
-    margin: 0;
+    margin: 0 auto;
     max-width: none;
     padding: 4rem 0;
 }
 div.left-side-section div.section-title h2{
-    text-align: left;
+    text-align: center;
     font-size: 40px;
+}
+@media only screen and (min-width: 1024px)
+{
+    div.left-side-section div.section-title {
+        margin: 0;
+        max-width: none;
+    }
+    div.left-side-section div.section-title h2 {
+        text-align: left;
+        font-size: 40px;
+    }
 }
 div.section-description{
     max-width: 100%;
@@ -313,6 +333,7 @@ div.right-side-section{
     flex: 0 1 calc(100% - 1rem);
 }
 div.right-side-section.img{
+    display: none;
     max-width: 75%;
     padding: 2rem 2rem 0 2rem;
     position: absolute;
@@ -370,22 +391,124 @@ div.subtitle-card{
 div.btn-card{
     margin-bottom: 2rem;
 }
+/** WHY SECTION **/
+div.section-content.why {
+    position: relative;
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+    div.left-side-section {
+        flex: 0 1 calc(37% - 1rem);
+    }
+    div.right-side-section.img {
+        display: block;
+    }
+}
+div.section-content.why div.section-description {
+    padding-bottom: 20rem;
+}
+@media only screen and (min-width: 480px)
+{
+    div.section-content.why div.section-description {
+        padding-bottom: 23rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    div.section-content.why div.section-description {
+        padding-bottom: 9rem;
+    }
+}
 /* Icons */
 div.icons {
     position: absolute;
-    bottom: -25%;
+    bottom: -17%;
     left: 0%;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
 }
+@media only screen and (min-width: 480px)
+{
+    div.icons {
+        position: absolute;
+        bottom: -20%;
+        left: 0%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 600px)
+{
+    div.icons{
+        display: inline-block;
+        bottom: -25%;
+        left: 0%;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    div.icons {
+        bottom: -25%;
+        left: 0%;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    div.icons {
+        bottom: -20%;
+        left: 0%;
+    }
+}
+@media only screen and (min-width: 1162px) {
+    div.icons {
+        bottom: -25%;
+        left: 0%;
+    }
+}
 ul.icons-list{
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+@media only screen and (min-width: 600px)
+{
+    ul.icons-list {
+        display: flex;
+        flex-flow: row nowrap;
+    }
 }
 ul.icons-list li{
     margin: 0 auto;
-    width: 155px;
-    max-width: 155px;
+    flex: 0 1 calc(37% - .5rem);
+    min-width: 110px;
+}   
+@media only screen and (min-width: 480px)
+{
+    ul.icons-list li {
+        flex: 0 1 calc(37% - .5rem);
+    }
+}
+@media only screen and (min-width: 600px) 
+{
+    ul.icons-list li {
+        flex: 0 1 calc(20% - .5rem);
+        min-width: 50px!important;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    ul.icons-list li {
+        flex: 0 1 calc(17% - 1rem);
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    ul.icons-list li {
+        flex: 0 1 calc(15% - 1rem);
+    }
 }
 ul.icons-list li img{
     width: 100%;
@@ -397,12 +520,34 @@ ul.icons-list li img{
 ul.icons-list li img:hover{
     transform: rotateZ(-20deg)
         scale(1.1);
-
 }
 ul.icons-list li div.i-description{
     padding: 1rem 0 2rem 0rem;
     max-width: 70%;
     margin: 0 auto;
+}
+@media only screen and (min-width: 768px)
+{
+    ul.icons-list li div.i-description {
+        max-width: 100%;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    ul.icons-list li div.i-description {
+        max-width: 75%;
+    }
+}
+ul.icons-list li div.i-description.desc-1 p,
+ul.icons-list li div.i-description.desc-2 p{
+    color: #fff;
+}
+@media only screen and (min-width: 600px)
+{
+    ul.icons-list li div.i-description.desc-1 p,
+    ul.icons-list li div.i-description.desc-2 p {
+        color: #000;
+    }
 }
 ul.icons-list li div.i-description.desc-2,
 ul.icons-list li div.i-description.desc-4{
@@ -1130,4 +1275,67 @@ div.container div.formBx form div.inputBox textarea:valid{
     div.container div.formBx form div.inputBox textarea:valid~span {
         font-size: 11px;
     }
+}
+
+/*** FORMULARIO PIDE PRESUPUESTO ***/
+div.main-form{
+    min-height: 90vh;
+    max-height: 90vh;
+    max-width: 90%;
+    width: 90%;
+    background-color: #333333;
+    padding: 5rem;
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    transition: all .3s ease;
+}
+div.main-form.active{
+    visibility: visible;
+    opacity: 1;
+}
+div.main-form form{
+    flex: 0 1 calc(66% - 1rem);
+    display: flex;
+    flex-flow: row wrap;
+}
+div.main-form div.description-form{
+    flex: 0 1 calc(33% - 1rem);
+}
+div.main-form div.form-field{
+    flex: 0 1 calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+div.main-form div.form-field.textarea{
+    flex: 0 1 calc(100% - 2rem);
+}
+div.main-form div.form-field label{
+    font-size: 15px;
+    font-family: var(--fuenteSecundaria);
+    color: var(--colorPrimario);
+    margin-bottom: .5rem;
+}
+div.main-form div.form-field input,
+div.main-form div.form-field select
+{
+    max-width: 90%;
+    flex: 0 1 calc(95% - .5rem);
+    font-size: 15px;
+    font-family: var(--fuenteSecundaria);
+    padding: .5rem;
+}
+
+div.main-form img.cross-close{
+    position: absolute;
+    top: 5%;
+    right: 2.5%;
+    max-width: 20px;
 }
