@@ -12,33 +12,34 @@
 </head>
 <body>
     <div id="main-form" class="main-form">
-        <form action="#">
-            <div class="form-field">
-                <label for="">Nombre y apellido</label>
-                <input type="text">
+        <form action="index.html" method="post">
+            <div class="form-fields">
+                <div class="form-field">
+                <label for="">Nombre y apellidos *</label>
+                <input required type="text">
             </div>
             <div class="form-field">
-                <label for="mobile">Teléfono</label>
+                <label for="mobile">Teléfono (*)</label>
                 <input type="tel">
             </div>
             <div class="form-field">
-                <label for="email">Correo electrónico</label>
+                <label for="email">Correo electrónico (*)</label>
                 <input type="email">
             </div>
             <div class="form-field">
-                <label for="location">Localidad</label>
-                <input type="text">
+                <label for="location">Localidad *</label>
+                <input required type="text">
             </div>
             <div class="form-field">
                 <label for="dirección-obra">Dirección de la obra</label>
                 <input type="text">
             </div>
             <div class="form-field">
-                <label for="postal-code">Código Postal</label>
-                <input type="number">
+                <label for="postal-code">Código Postal *</label>
+                <input required type="number">
             </div>
             <div class="form-field">
-                <label for="tipo-de-trabajo">Tipo de trabajo</label>
+                <label for="tipo-de-trabajo">Tipo de trabajo *</label>
                 <select required name="tipo-de-trabajo" id="">
                     <option value="">-- Selecciona --</option>
                     <option value="reforma-integral">Reforma Integral</option>
@@ -58,7 +59,7 @@
                 </select>
             </div>
             <div class="form-field">
-                <label for="detalle-de-trabajo">Detalle de trabajo</label>
+                <label for="detalle-de-trabajo">Detalle de trabajo *</label>
                 <select required name="detalle-de-trabajo" id="job-detail">
                     <option class="general" value="">-- Selecciona --</option>
                     <!-- Reforma integral details -->
@@ -162,14 +163,14 @@
                     <option class="trabajos-altura-detalle" value="altura-limpieza-canalones">Limpieza Canalones</option>
                     <option class="trabajos-altura-detalle" value="altura-limpieza-general-tejados">Limpieza General de Tejados</option>
                     <!-- Reforma comunidades de vecinos details -->
-                    <option class="comunidad-vecinos-detalle" value="mantenimiento-general-comunidad-vecinos">Mantenimiento General Anual a Comunidad de Vecinos</option>
+                    <option class="comunidad-vecinos-detalle" value="mantenimiento-general-comunidad-vecinos">Mantenimiento General a Comunidad de Vecinos</option>
                     <option class="comunidad-vecinos-detalle" value="pintura-comunidad-vecinos">Pintura Comunidad de Vecinos</option>
                     <option class="comunidad-vecinos-detalle" value="ramp-normativa-comunidad-vecinos">Construir Rampa según Normativa</option>
                     <option class="comunidad-vecinos-detalle" value="limpieza-reparacion-tejados-comunidad-vecinos">Limpieza / Reparación Tejados</option>
                     <option class="comunidad-vecinos-detalle" value="pintura-exterior-comunidad-vecinos">Pintura Exterior Comunidad de Vecinos</option>
                     <!-- Reforma mantenimiento details -->
-                    <option class="mantenimiento-detalle" value="mantenimiento-general-comunidad-vecinos">Mantenimiento General Anual a Comunidad de Vecinos</option>
-                    <option class="mantenimiento-detalle" value="mantenimiento-general-administracion-fincas">Mantenimiento General Anual a Administración de Fincas</option>
+                    <option class="mantenimiento-detalle" value="mantenimiento-general-comunidad-vecinos">Mantenimiento General a Comunidad de Vecinos</option>
+                    <option class="mantenimiento-detalle" value="mantenimiento-general-administracion-fincas">Mantenimiento General a Administración de Fincas</option>
                     <option class="mantenimiento-detalle" value="mantenimiento-electrico">Mantenimiento Eléctrico</option>
                     <option class="mantenimiento-detalle" value="mantenimiento-goteras">Mantenimiento Goteras</option>
                     <option class="mantenimiento-detalle" value="mantenimiento-limpieza">Mantenimiento Limpieza</option>
@@ -191,21 +192,22 @@
                 </select>
             </div>
             <div class="form-field">
-                <label for="asunto">Asunto</label>
-                <input type="text">
+                <label for="asunto">Asunto *</label>
+                <input required type="text">
             </div>
             <div class="form-field textarea">
                 <label for="descripcion-obra">Descripción</label>
                 <textarea name="descripcion-obra" id="descripcion-obra" cols="30" rows="10"></textarea>
             </div>
+            </div>
+            <div class="description-form">
+                <p>Consultar el presupuesto de tu obra es GRATIS.</p><br>
+                <p>Una vez enviado, nos pondremos en contacto contigo en los próximos días para darle todos los detalles y tarifas de tu obra.</p><br>
+                <p>Podremos ayudarte a elegir los mejores métodos a utilizar además de darte la mejor atención personalizada.</p><br>
+                <p>Envíanos tu proyecto y nos encargamos de construir tu sueño.</p><br>
+                <input class="envio-main-form" value="Enviar" type="submit">
+            </div>
         </form>
-        <div class="description-form">
-            <p>Consultar el presupuesto de tu obra es GRATIS.</p>
-            <p>Una vez enviado, nos pondremos en contacto contigo en los próximos días para darle todos los detalles y tarifas de tu obra.</p>
-            <p>Podremos ayudarte a elegir los mejores métodos a utilizar además de darte la mejor atención personalizada.</p>
-            <p>Envíanos tu proyecto y nos encargamos de construir tu sueño.</p>
-            <input type="submit">
-        </div>
         <img onclick="toggleForm();" class="cross-close" src="img/svg/close-cross.svg" alt="Cross Close">
     </div>
 

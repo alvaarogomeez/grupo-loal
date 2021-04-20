@@ -1278,7 +1278,7 @@ div.container div.formBx form div.inputBox textarea:valid{
 }
 
 /*** FORMULARIO PIDE PRESUPUESTO ***/
-div.main-form{
+/* div.main-form{
     min-height: 90vh;
     max-height: 90vh;
     max-width: 90%;
@@ -1289,11 +1289,11 @@ div.main-form{
     left: 5%;
     top: 5%;
     z-index: 1000;
-    display: flex;
-    justify-content: center;
     visibility: hidden;
     opacity: 0;
     overflow-y: auto;
+    box-shadow: 0 0 0 100vh rgba(255, 255, 255, .5);
+    border-radius: 30px;
     transition: all .3s ease;
 }
 div.main-form.active{
@@ -1301,12 +1301,16 @@ div.main-form.active{
     opacity: 1;
 }
 div.main-form form{
-    flex: 0 1 calc(66% - 1rem);
+    display: flex;
+    justify-content: center;
+}
+div.main-form div.form-fields{
+    flex: 0 1 calc(75% - 1rem);
     display: flex;
     flex-flow: row wrap;
 }
 div.main-form div.description-form{
-    flex: 0 1 calc(33% - 1rem);
+    flex: 0 1 calc(25% - 1rem);
 }
 div.main-form div.form-field{
     flex: 0 1 calc(50% - 1rem);
@@ -1315,7 +1319,7 @@ div.main-form div.form-field{
     margin-bottom: 1rem;
 }
 div.main-form div.form-field.textarea{
-    flex: 0 1 calc(100% - 2rem);
+    flex: 0 1 calc(95% - 2rem);
 }
 div.main-form div.form-field label{
     font-size: 15px;
@@ -1326,16 +1330,46 @@ div.main-form div.form-field label{
 div.main-form div.form-field input,
 div.main-form div.form-field select
 {
-    max-width: 90%;
     flex: 0 1 calc(95% - .5rem);
+    max-width: 90%;
     font-size: 15px;
     font-family: var(--fuenteSecundaria);
     padding: .5rem;
 }
-
+div.main-form div.form-field select{
+    width: 100%;
+}
 div.main-form img.cross-close{
     position: absolute;
     top: 5%;
     right: 2.5%;
     max-width: 20px;
+    transition: all .2s ease;
 }
+div.main-form img.cross-close:hover{
+    cursor: pointer;
+}
+div.main-form div.description-form{
+    font-size: 20px;
+    font-family: var(--fuenteSecundaria);
+    color: #797979;
+    margin-top: 1rem;
+    text-align: center;
+}
+div.description-form input.envio-main-form{
+    outline: none;
+    border: 3px solid var(--colorPrimario);
+    background-color: var(--colorPrimario);
+    font-family: var(--fuentePrimaria);
+    font-size: 1.4em;
+    padding: .5rem 1.5rem;
+    margin-top: 2.5rem;
+    transition: all .2s ease;
+}
+div.description-form input.envio-main-form:hover{
+    background-color: transparent;
+    color: var(--colorPrimario);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px var(--colorPrimario);
+    cursor: pointer;
+} */
