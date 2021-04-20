@@ -211,16 +211,22 @@
         <img onclick="toggleForm();" class="cross-close" src="img/svg/close-cross.svg" alt="Cross Close">
     </div>
 
+    <div id="floating-btn-wrapper" class="floating-btn-wrapper">
+        <div id="floating-btn" class="btn special-btn floating-btn" onclick="toggleForm();">
+            <p>pide presupuesto</p>
+        </div>
+    </div>
+
     <div class="hero">
         <nav class="navbar">
             <div class="nav nav-1">
-                <a href="#">Sobre Nosotros</a>
-                <a href="#">Servicios</a>
+                <a href="#servicios">Servicios</a>
+                 <a href="#galeria-trabajos">Galería de trabajos</a>
             </div>
             <div class="logo"><a href="./"><img src="img/svg/LOGOLOALBlancoWEB.svg" alt="Logo LOAL"></a></div>
             <div class="nav nav-2">
-                <a href="#">Galería de trabajos</a>
-                <a href="#">Contacto</a>
+                <a href="#sobre-nosotros">Sobre Nosotros</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
 
@@ -242,7 +248,7 @@
 
     <section class="light container">
         <div class="section-title">
-            <h2>Descubre todo lo que tenemos para ofrecerte</h2>
+            <h2><a name="servicios">Descubre todo lo que tenemos para ofrecerte</a></h2>
         </div>
         <div class="subtitle section-subtitle">
             <p>Nos ajustamos a todo tipo de presupuesto sin perder la calidad de una buena reforma</p>
@@ -438,7 +444,7 @@
 
     <section class="light mt-15">
         <div class="section-title house-dec">
-            <h2>Nuestros últimos proyectos</h2>
+            <h2><a name="galeria-trabajos">Galería de trabajos</a></h2>
         </div>
             <div class="splide">
                 <div class="splide__track">
@@ -477,7 +483,7 @@
             </div>
             <div class="right-side-section">
                 <div class="section-title">
-                    <h2>Sobre nosotros</h2>
+                    <h2><a name="sobre-nosotros">Sobre nosotros</a></h2>
                 </div>
                 <div class="section-description">
                     <p><span class="bold">Somos</span> una pequeña empresa de <span class="highlight">profesionales</span> unidos por el trabajo, buscando siempre la mejora continua para lograr <span class="highlight">nuestro objetivo que es el bienestar y la satisfacción del cliente</span>.</p><br>
@@ -626,7 +632,7 @@
 
     <section class="light">
         <div class="section-title">
-            <h2>¿Dudas?¿Sugerencias?</h2>
+            <h2><a name="contacto">¿Dudas?¿Sugerencias?</a></h2>
         </div>
         <div class="section-content contact-form container">
             <div class="formBx">
