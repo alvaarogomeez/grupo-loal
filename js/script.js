@@ -3,7 +3,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 		// Splide Slider
 		new Splide( '.splide' ).mount();
 });
-
 document.addEventListener('scroll', ()=>{
 	var floatingBtnWrapper = document.querySelector('#floating-btn-wrapper');
 	if(scrollY>=window.innerHeight){
@@ -44,19 +43,24 @@ function toggleForm() {
 };
 
 function formRestraining(idClicked){
-	// Controlando Primer Select
+	// Controlando Primer Select;
 	var option = firstSelectRestrain(idClicked);
 	// Controlando Segundo Select
 	secondSelectRestrain(option);
 }
 
 function firstSelectRestrain(id){
-	if(id.length>4){
+	
+	if(id[id.length - 1] == '2'){
+		for(i=0; i<6; i++){
+			id=id.substring(0, id.length - 1);
+		}
+		console.log(id);
+	} else if(id.length>4){
 		for(i=0; i<4; i++){
 			id=id.substring(0, id.length - 1);
 		}
-	}else 
-	console.log(id);
+	}
 	if(id == "" || id == "floating"){
 		var optionTrabajo = document.querySelector('#select-default');
 		optionTrabajo.selected = true;
