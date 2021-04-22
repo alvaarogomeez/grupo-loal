@@ -23,6 +23,7 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--grisFondo);
@@ -181,9 +182,70 @@ div.logo h1{
     font-family: var(--fuenteSecundaria);
     margin-right: 60px;
     text-transform: uppercase;
+    letter-spacing: 1.1px;
 }
 .nav a:last-of-type{
     margin: 0;
+}
+/* Jumping Navs */
+section.servicios{
+    position: relative;
+}
+section.servicios a[name="servicios"]{
+    position: absolute;
+    top: 0.5%;
+}
+section.galeria-trabajos{
+    position: relative;
+}
+section.galeria-trabajos a[name="galeria-trabajos"]{
+    position: absolute;
+    top: 0%;
+}
+section.sobre-nosotros {
+    position: relative;
+}
+
+section.sobre-nosotros a[name="sobre-nosotros"] {
+    position: absolute;
+    top: 0%;
+}
+section.contacto {
+    position: relative;
+}
+
+section.contacto a[name="contacto"] {
+    position: absolute;
+    top: 0%;
+}
+/* Animation Hover Navs */
+div.nav{
+    display: flex;
+}
+div.nav a{
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+div.nav a::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    width: 90%;
+    height: 20px;
+    background-color: var(--colorPrimario);
+    z-index: -1;
+    transform: 
+        translateY(10px)
+        translateX(-106%);
+    transition: all .25s ease;
+}
+div.nav a:hover::after{
+    transform: 
+        translateY(10px)
+        translateX(0%)!important;
 }
 /** HERO **/
 div.hero {
@@ -395,6 +457,55 @@ div.subtitle-card{
 div.btn-card{
     margin-bottom: 2rem;
 }
+/* All List */
+div.info-cards.all-list{
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    min-height: 90vh;
+    max-height: 90vh;
+    max-width: 90%;
+    width: 90%;
+    background-color: #333333;
+    padding: 5rem;
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 0 0 0 100vh rgba(255, 255, 255, .5);
+    border-radius: 30px;
+    transition: .2s ease;
+    z-index: -100;
+    transform: translateY(-100vh);
+}
+div.info-cards.all-list.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+    transform: translateY(0);
+}
+div.info-cards.all-list img.cross-close{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    max-width: 20px;
+}
+div.info-cards.all-list img.cross-close{
+    cursor: pointer;
+}
+ul.all.info-cards-list{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem;
+    min-height: 230vh;;
+}
+ul.all.info-cards-list li{
+    flex: 0 1 calc(25% - 1rem);
+    /* min-height: 404.8px;
+    max-height: 404.8px; */
+    margin-bottom: 2.5rem;
+}
 /** WHY SECTION **/
 div.section-content.why {
     position: relative;
@@ -598,7 +709,7 @@ li.splide__slide::before{
     background-color: rgba(0,0,0,.5);
 }
 /** SOBRE NOSOTROS **/
-div.section-content.about-us {
+div.section-content.sobre-nosotros {
     position: relative;
     display: flex;
     justify-content: center;
@@ -606,21 +717,21 @@ div.section-content.about-us {
 div.left-side-section.img {
     display: none;
 }
-div.section-content.about-us div.right-side-section p{
+div.section-content.sobre-nosotros div.right-side-section p{
     font-size: 17px
 }
 @media only screen and (min-width: 480px)
 {
-    div.section-content.about-us div.right-side-section p {
+    div.section-content.sobre-nosotros div.right-side-section p {
         font-size: 18px
     }
 }
 @media only screen and (min-width: 1024px) {
-    div.section-content.about-us div.right-side-section p {
+    div.section-content.sobre-nosotros div.right-side-section p {
         font-size: 19px
     }
 }
-div.section-content.about-us div.section-title {
+div.section-content.sobre-nosotros div.section-title {
     max-width: 100%;
     margin: 0 auto;
     margin-top: 6rem;
@@ -638,10 +749,10 @@ div.section-content.about-us div.section-title {
     div.right-side-section {
         flex: 0 1 calc(45% - 1rem);
     }
-    div.section-content.about-us {
+    div.section-content.sobre-nosotros {
         justify-content: flex-end;
     }
-    div.section-content.about-us div.section-title {
+    div.section-content.sobre-nosotros div.section-title {
         max-width: 90%;
     }
 }
@@ -1343,6 +1454,12 @@ div.main-form div.form-field select
 div.main-form div.form-field select{
     width: 100%;
 }
+div.main-form img.logo-form{
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    max-width: 45px;
+}
 div.main-form img.cross-close{
     position: absolute;
     top: 5%;
@@ -1385,19 +1502,21 @@ div.floating-btn-wrapper{
     width: 25%;
     max-width: 25%;
     height: 100px;
-    background-color: rgba(0, 0, 0, .07);
+    background-color: rgb(236, 236, 236);
     position: fixed;
     top: 5%;
     right: 5%;
-    box-shadow: 0px 0px 30px rgba(0, 159, 165, 0.3);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     visibility: hidden;
     opacity: 0;
-    transition: .2s ease;
+    transition: all .2s ease;
+    z-index: -10;
 }
 div.floating-btn-wrapper.active {
     visibility: visible;
     opacity: 1;
+    z-index: 100;
 }
 div.special-btn{
     display: inline-block;

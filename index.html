@@ -40,145 +40,28 @@
             </div>
             <div class="form-field">
                 <label for="tipo-de-trabajo">Tipo de trabajo *</label>
-                <select required name="tipo-de-trabajo" id="">
-                    <option value="">-- Selecciona --</option>
-                    <option value="reforma-integral">Reforma Integral</option>
-                    <option value="reforma-baño">Reforma Baño</option>
-                    <option value="reforma-cocina">Reforma Cocina</option>
-                    <option value="pintura">Pintura</option>
-                    <option value="albañileria">Albañilería</option>
-                    <option value="electricidad">Electricidad</option>
-                    <option value="fontaneria">Fontanería</option>
-                    <option value="tarima">Tarima</option>
-                    <option value="carpinteria">Carpintería</option>
-                    <option value="carpinteria-aluminio">Carpintería Aluminio</option>
-                    <option value="aire-acondicionado">Aire Acondicionado</option>
-                    <option value="trabajos-altura">Trabajos en Altura</option>
-                    <option value="comunidades-vecinos">Comunidad de Vecinos</option>
-                    <option value="mantenimiento">Mantenimiento</option>
+                <select required name="tipo-de-trabajo" id="tipo-de-trabajo">
+                    <option id="select-default" value="">-- Selecciona --</option>
+                    <option id="reforma-integral" value="reforma-integral" onclick="secondSelectRestrain(this);">Reforma Integral</option>
+                    <option id="reforma-baño" value="reforma-baño" onclick="secondSelectRestrain(this);">Reforma Baño</option>
+                    <option id="reforma-cocina" value="reforma-cocina" onclick="secondSelectRestrain(this);">Reforma Cocina</option>
+                    <option id="pintura" value="pintura" onclick="secondSelectRestrain(this);">Pintura</option>
+                    <option id="albañileria" value="albañileria" onclick="secondSelectRestrain(this);">Albañilería</option>
+                    <option id="paredes-suelos" value="paredes-suelos" onclick="secondSelectRestrain(this);">Paredes y Suelos</option>
+                    <option id="electricidad" value="electricidad" onclick="secondSelectRestrain(this);">Electricidad</option>
+                    <option id="fontaneria" value="fontaneria" onclick="secondSelectRestrain(this);">Fontanería</option>
+                    <option id="tarima" value="tarima" onclick="secondSelectRestrain(this);">Tarima</option>
+                    <option id="carpinteria" value="carpinteria" onclick="secondSelectRestrain(this);">Carpintería</option>
+                    <option id="carpinteria-aluminio" value="carpinteria-aluminio" onclick="secondSelectRestrain(this);">Carpintería Aluminio</option>
+                    <option id="aire-acondicionado" value="aire-acondicionado" onclick="secondSelectRestrain(this);">Aire Acondicionado</option>
+                    <option id="trabajos-altura" value="trabajos-altura" onclick="secondSelectRestrain(this);">Trabajos en Altura</option>
+                    <option id="comunidades-vecinos" value="comunidades-vecinos" onclick="secondSelectRestrain(this);">Comunidad de Vecinos</option>
+                    <option id="mantenimiento" value="mantenimiento" onclick="secondSelectRestrain(this);">Mantenimiento</option>
                 </select>
             </div>
             <div class="form-field">
                 <label for="detalle-de-trabajo">Detalle de trabajo *</label>
-                <select required name="detalle-de-trabajo" id="job-detail">
-                    <option class="general" value="">-- Selecciona --</option>
-                    <!-- Reforma integral details -->
-                    <option class="reforma-integral-detalle" value="reforma-chalet">Reforma Chalet</option>
-                    <option class="reforma-integral-detalle" value="reforma-local">Reforma Local</option>
-                    <option class="reforma-integral-detalle" value="reforma-finca">Reforma Finca</option>
-                    <option class="reforma-integral-detalle" value="reforma-apartamento">Reforma Apartamento</option>
-                    <option class="reforma-integral-detalle" value="reforma-vivienda">Reforma Vivienda</option>
-                    <option class="reforma-integral-detalle" value="reforma-parcial">Reforma Parcial</option>
-                    <option class="reforma-integral-detalle" value="reforma-completa">Reforma Completa</option>
-                    <option class="reforma-integral-detalle" value="reforma-completa-proyecto">Reforma Completa con Proyecto</option>
-                    <!-- Reforma baño details -->
-                    <option class="reforma-baño-detalle" value="bañera-por-ducha">Cambiar Bañera por Plato de Ducha</option>
-                    <option class="reforma-baño-detalle" value="cambio-mampara">Cambiar Mampara</option>
-                    <option class="reforma-baño-detalle" value="mueble-baño-espejo">Instalar Mueble de Baño y Espejo</option>
-                    <option class="reforma-baño-detalle" value="cambio-azulejos">Cambiar Azulejos</option>
-                    <!-- Reforma cocina details -->
-                    <option class="reforma-cocina-detalle" value="reforma-cocina">Reforma Cocina</option>
-                    <option class="reforma-cocina-detalle" value="amueblamiento-cocina">Amueblar Cocina</option>
-                    <option class="reforma-cocina-detalle" value="campana-extractora-cocina">Instalar o Cambiar Campana Extractora</option>
-                    <option class="reforma-cocina-detalle" value="encimera-cocina">Colocar o Quitar Encimera</option>
-                    <option class="reforma-cocina-detalle" value="electrodomésticos-cocina">Instalación de Electrodomésticos</option>
-                    <!-- Reforma pintura details -->
-                    <option class="pintura-detalle" value="pintura-lisos">Lisos</option>
-                    <option class="pintura-detalle" value="lacar-puertas">Lacar Puertas</option>
-                    <option class="pintura-detalle" value="pintar-exterior-vivienda">Pintar Exterior Vivienda</option>
-                    <option class="pintura-detalle" value="pintar-interior-vivienda">Pintar Interior Vivienda</option>
-                    <option class="pintura-detalle" value="pintar-exterior-edificio">Pintar Exterior Edificio</option>
-                    <option class="pintura-detalle" value="pintar-interior-edificio">Pintar Interior Edificio</option>
-                    <option class="pintura-detalle" value="pintar-exterior-local">Pintar Exterior Local</option>
-                    <option class="pintura-detalle" value="pintar-interior-local">Pintar Interior Local</option>
-                    <option class="pintura-detalle" value="pintura-gotele">Quitar o Poner Gotelé</option>
-                    <option class="pintura-detalle" value="pintura-empapelamiento">Quitar Papel o Empapelar</option>
-                    <option class="pintura-detalle" value="lacar-muebles">Lacar Muebles</option>
-                    <option class="pintura-detalle" value="pintura-esmaltes">Esmaltes de Todo Tipo</option>
-                    <option class="pintura-detalle" value="pintar-garajes">Pintar Garajes</option>
-                    <option class="pintura-detalle" value="pintura-decorativa">Pintura Decorativa</option>
-                    <!-- Reforma albañilería details -->
-                    <option class="albañileria-detalle" value="alicatado-solado">Alicatar / Solar</option>
-                    <option class="albañileria-detalle" value="construccion-porche">Construir Porche</option>
-                    <option class="albañileria-detalle" value="albañileria-reforma">Albañilería de Reforma</option>
-                    <!-- Reforma electricidad details -->
-                    <option class="electricidad-detalle" value="instalacion-electrica">Instalación Eléctrica Obra Nueva</option>
-                    <option class="electricidad-detalle" value="reforma-instalacion-electrica">Reforma Instalación Eléctrica Vivienda / Local</option>
-                    <option class="electricidad-detalle" value="iluminacion-led">Instalar Iluminación LED</option>
-                    <option class="electricidad-detalle" value="revision-instalaciones-electricas">Revisión Instalaciones Eléctricas</option>
-                    <option class="electricidad-detalle" value="cuadros-electricos">Cuadros Eléctricos</option>
-                    <option class="electricidad-detalle" value="instalacion-enchufes">Instalación Enchufes</option>
-                    <option class="electricidad-detalle" value="cambios-enchufes">Cambios de Enchufes</option>
-                    <option class="electricidad-detalle" value="radiadores-electricos">Radiadores Eléctricos</option>
-                    <!-- Reforma fontanería details -->
-                    <option class="fontaneria-detalle" value="instalar-fontaneria">Instalar Fontanería Completa</option>
-                    <option class="fontaneria-detalle" value="cambiar-fontaneria-baño-cocina">Cambio Fontanería Baño o Cocina</option>
-                    <option class="fontaneria-detalle" value="desatascar-tuberias">Desatascar Tuberías</option>
-                    <option class="fontaneria-detalle" value="reforma-instalacion-fontaneria">Reforma Instalación Fontanería</option>
-                    <option class="fontaneria-detalle" value="reparar-bajantes">Reparar Bajantes</option>
-                    <option class="fontaneria-detalle" value="instalacion-fontaneria-puntos">Instalar Fontanería por Puntos</option>
-                    <option class="fontaneria-detalle" value="reparar-tuberias">Reparar Tuberías</option>
-                    <option class="fontaneria-detalle" value="calefaccion-gas">Calefacción Gas</option>
-                    <option class="fontaneria-detalle" value="cambiar-caldera">Cambiar Caldera</option>
-                    <option class="fontaneria-detalle" value="instalar-termo-electrico">Instalar Termo Eléctrico</option>
-                    <option class="fontaneria-detalle" value="calefaccion-central">Calefacción Central</option>
-                    <!-- Reforma tarima details -->
-                    <option class="tarima-detalle" value="instalar-tarima">Instalar Tarima de Todo Tipo</option>
-                    <option class="tarima-detalle" value="quitar-tarima">Quitar Tarima</option>
-                    <option class="tarima-detalle" value="reparar-tarima">Reparación de Tarima</option>
-                    <option class="tarima-detalle" value="instalar-rodapie">Instalar Rodapiés</option>
-                    <option class="tarima-detalle" value="reparar-rodapie">Reparar Rodapiés</option>
-                    <!-- Reforma carpintería details -->
-                    <option class="carpinteria-detalle" value="instalar-puerta-corredera-empotrada">Instalar Puerta Corredera Empotrada</option>
-                    <option class="carpinteria-detalle" value="cambiar-carpinteria-madera">Cambiar Carpintería Madera</option>
-                    <option class="carpinteria-detalle" value="instalar-carpinteria">Instalar Carpintería</option>
-                    <option class="carpinteria-detalle" value="reparacion-carpinteria">Reparación Carpintería</option>
-                    <option class="carpinteria-detalle" value="instalar-puerta-seguridad">Instalar Puerta de Seguridad</option>
-                    <option class="carpinteria-detalle" value="venta-puerta-acorazada-kiuso">Venta de Puerta Acorazada (Kiuso)</option>
-                    <option class="carpinteria-detalle" value="venta-puerta-blindada-kiuso">Venta de Puerta Blindada (Kiuso)</option>
-                    <option class="carpinteria-detalle" value="cerrajeria-kiuso">Cerrajería Kiuso</option>
-                    <!-- Reforma carpintería aluminio details -->
-                    <option class="carpinteria-aluminio-detalle" value="instalar-carpinteria-aluminio">Instalar Carpintería Aluminio</option>
-                    <option class="carpinteria-aluminio-detalle" value="venta-carpinteria-aluminio-con-sin-instalacion">Venta Carpintería Aluminio Con o Sin Instalación</option>
-                    <option class="carpinteria-aluminio-detalle" value="reparacion-carpinteria-aluminio">Reparar Carpintería Aluminio</option>
-                    <option class="carpinteria-aluminio-detalle" value="cambiar-carpinteria-aluminio">Cambiar Carpintería Aluminio</option>
-                    <option class="carpinteria-aluminio-detalle" value="persianas-aluminio">Persianas de Aluminio</option>
-                    <option class="carpinteria-aluminio-detalle" value="carpinteria-aluminio-mosquiteras">Mosquiteras</option>
-                    <option class="carpinteria-aluminio-detalle" value="chapas-aluminio">Chapas de Terminación Aluminio</option>
-                    <!-- Reforma aire acondicionado details -->
-                    <option class="aire-acondicionado-detalle" value="instalar-maquina-aire-acondicionado">Instalar Máquina de Aire Acondicionado</option>
-                    <option class="aire-acondicionado-detalle" value="instalar-maquina-aire-acondicionado-conductos">Instalar Máquina de Aire Acondicionado Conductos</option>
-                    <option class="aire-acondicionado-detalle" value="preinstalar-aire-acondicionado">Preinstalar Aire Acondicionado</option>
-                    <option class="aire-acondicionado-detalle" value="quitar-aire-acondicionado">Quitar Aire Acondicionado</option>
-                    <option class="aire-acondicionado-detalle" value="mantenimiento-aire-acondicionado">Mantenimiento Aire Acondicionado</option>
-                    <!-- Reforma trabajos altura details -->
-                    <option class="trabajos-altura-detalle" value="altura-verticales">Verticales</option>
-                    <option class="trabajos-altura-detalle" value="altura-tejados">Tejados</option>
-                    <option class="trabajos-altura-detalle" value="altura-andamios">Andamios</option>
-                    <option class="trabajos-altura-detalle" value="altura-reparar-edificios-viviendas">Reparar-edificios-viviendas</option>
-                    <option class="trabajos-altura-detalle" value="altura-goteras">Goteras</option>
-                    <option class="trabajos-altura-detalle" value="altura-instalaciones">Instalaciones</option>
-                    <option class="trabajos-altura-detalle" value="altura-impermeabilizaciones">Impermeabilizaciones</option>
-                    <option class="trabajos-altura-detalle" value="altura-instalacion-canalones">Instalación Canalones</option>
-                    <option class="trabajos-altura-detalle" value="altura-limpieza-canalones">Limpieza Canalones</option>
-                    <option class="trabajos-altura-detalle" value="altura-limpieza-general-tejados">Limpieza General de Tejados</option>
-                    <!-- Reforma comunidades de vecinos details -->
-                    <option class="comunidad-vecinos-detalle" value="mantenimiento-general-comunidad-vecinos">Mantenimiento General a Comunidad de Vecinos</option>
-                    <option class="comunidad-vecinos-detalle" value="pintura-comunidad-vecinos">Pintura Comunidad de Vecinos</option>
-                    <option class="comunidad-vecinos-detalle" value="ramp-normativa-comunidad-vecinos">Construir Rampa según Normativa</option>
-                    <option class="comunidad-vecinos-detalle" value="limpieza-reparacion-tejados-comunidad-vecinos">Limpieza / Reparación Tejados</option>
-                    <option class="comunidad-vecinos-detalle" value="pintura-exterior-comunidad-vecinos">Pintura Exterior Comunidad de Vecinos</option>
-                    <!-- Reforma mantenimiento details -->
-                    <option class="mantenimiento-detalle" value="mantenimiento-general-comunidad-vecinos">Mantenimiento General a Comunidad de Vecinos</option>
-                    <option class="mantenimiento-detalle" value="mantenimiento-general-administracion-fincas">Mantenimiento General a Administración de Fincas</option>
-                    <option class="mantenimiento-detalle" value="mantenimiento-electrico">Mantenimiento Eléctrico</option>
-                    <option class="mantenimiento-detalle" value="mantenimiento-goteras">Mantenimiento Goteras</option>
-                    <option class="mantenimiento-detalle" value="mantenimiento-limpieza">Mantenimiento Limpieza</option>
-                    <option class="mantenimiento-detalle" value="reparacion-grieta-fachada">Reparar Grietas Fachada</option>
-                    <option class="mantenimiento-detalle" value="limpiar-fachada">Limpiar Fachada</option>
-                    <option class="mantenimiento-detalle" value="revisar-poner-canalones-bajantes">Revisar o Poner Canalones Bajantes</option>
-                    <!-- Otros general -->
-                    <option class="general" value="otros">Otros...</option>
+                <select required name="detalle-de-trabajo" id="trabajo-detalle">
                 </select>
             </div>
             <div class="form-field">
@@ -208,20 +91,15 @@
                 <input class="envio-main-form" value="Enviar" type="submit">
             </div>
         </form>
+        <img class="logo-form" src="img/svg/LOGOLOALBlancoWEB.svg" alt="Logo Loal Blanco">
         <img onclick="toggleForm();" class="cross-close" src="img/svg/close-cross.svg" alt="Cross Close">
-    </div>
-
-    <div id="floating-btn-wrapper" class="floating-btn-wrapper">
-        <div id="floating-btn" class="btn special-btn floating-btn" onclick="toggleForm();">
-            <p>pide presupuesto</p>
-        </div>
     </div>
 
     <div class="hero">
         <nav class="navbar">
             <div class="nav nav-1">
                 <a href="#servicios">Servicios</a>
-                 <a href="#galeria-trabajos">Galería de trabajos</a>
+                <a href="#galeria-trabajos">Galería de trabajos</a>
             </div>
             <div class="logo"><a href="./"><img src="img/svg/LOGOLOALBlancoWEB.svg" alt="Logo LOAL"></a></div>
             <div class="nav nav-2">
@@ -240,88 +118,22 @@
                 <p>Realizamos trabajos de todo tipo, desde <span class="highlight">reformas integrales</span>, hasta pequeños <span class="highlight">trabajos de iluminación</span>.</p> <br>
                 <p>Nos encargamos de todas y cada de las áreas del hogar para poder brindarte el servicio que te merece, pide presupuesto <span class="highlight upper">gratis</span></p>
             </div>
-             <div class="btn btn-primario btn-card" onclick="toggleForm();">
+             <div class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
                 <p>pide presupuesto</p>
             </div>
         </div>
     </div>
 
-    <section class="light container">
+    <section class="light container servicios">
+        <a name="servicios"></a>
         <div class="section-title">
-            <h2><a name="servicios">Descubre todo lo que tenemos para ofrecerte</a></h2>
+            <h2>Descubre todo lo que tenemos para ofrecerte</h2>
         </div>
         <div class="subtitle section-subtitle">
             <p>Nos ajustamos a todo tipo de presupuesto sin perder la calidad de una buena reforma</p>
         </div>
 
-        <div class="info-cards">
-            <ul class="info-cards-list">
-                <li class="info-card">
-                    <div class="intro-info-card">
-                        <div class="img-card">
-                            <img src="img/svg/Vivienda.svg" alt="Vivienda">
-                        </div>
-                        <div class="title-card">
-                            <h3>Reforma integral</h3>
-                        </div>
-                    </div>
-                    <div class="subtitle subtitle-card">
-                        <p>Dejamos como nuevas todas y cada de las áreas del hogar</p>
-                    </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
-                        <p>pide presupuesto</p>
-                    </div>
-                </li>
-                <li class="info-card">
-                    <div class="intro-info-card">
-                        <div class="img-card">
-                            <img src="img/svg/Iluminacion.svg" alt="Bombilla Iluminación">
-                        </div>
-                        <div class="title-card">
-                            <h3>Iluminación</h3>
-                        </div>
-                    </div>
-                    <div class="subtitle subtitle-card">
-                        <p>Junto con materiales de alta calidad le damos luz a tus espacios</p>
-                    </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
-                        <p>pide presupuesto</p>
-                    </div>
-                </li>
-                <li class="info-card">
-                    <div class="intro-info-card">
-                        <div class="img-card">
-                            <img src="img/svg/Pintura.svg" alt="Brocha Pintura">
-                        </div>
-                        <div class="title-card">
-                            <h3>Pintura</h3>
-                        </div>
-                    </div>
-                    <div class="subtitle subtitle-card">
-                        <p>¿Hace cuánto que no re-pintas tu casa? Se verá como nueva</p>
-                    </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
-                        <p>pide presupuesto</p>
-                    </div>
-                </li>
-                <li class="info-card">
-                    <div class="intro-info-card">
-                        <div class="img-card">
-                            <img src="img/svg/Paredes y Suelos.svg" alt="Paredes y Suelos">
-                        </div>
-                        <div class="title-card">
-                            <h3>Paredes y suelos</h3>
-                        </div>
-                    </div>
-                    <div class="subtitle subtitle-card">
-                        <p>Colocamos azulejos, parquets, porcelanatos y demás tipos</p>
-                    </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
-                        <p>pide presupuesto</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        
        <div class="info-cards">
             <ul class="info-cards-list">
                 <li class="info-card">
@@ -336,7 +148,7 @@
                     <div class="subtitle subtitle-card">
                         <p>Dejamos como nuevas todas y cada de las áreas del hogar</p>
                     </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
+                    <div id="reforma-integral-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
                         <p>pide presupuesto</p>
                     </div>
                 </li>
@@ -346,13 +158,13 @@
                             <img src="img/svg/Iluminacion.svg" alt="Bombilla Iluminación">
                         </div>
                         <div class="title-card">
-                            <h3>Iluminación</h3>
+                            <h3>Electricidad</h3>
                         </div>
                     </div>
                     <div class="subtitle subtitle-card">
                         <p>Junto con materiales de alta calidad le damos luz a tus espacios</p>
                     </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
+                    <div id="electricidad-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
                         <p>pide presupuesto</p>
                     </div>
                 </li>
@@ -368,7 +180,7 @@
                     <div class="subtitle subtitle-card">
                         <p>¿Hace cuánto que no re-pintas tu casa? Se verá como nueva</p>
                     </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
+                    <div id="pintura-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
                         <p>pide presupuesto</p>
                     </div>
                 </li>
@@ -384,18 +196,236 @@
                     <div class="subtitle subtitle-card">
                         <p>Colocamos azulejos, parquets, porcelanatos y demás tipos</p>
                     </div>
-                    <div class="btn btn-primario btn-card" onclick="toggleForm();">
+                    <div id="paredes-suelos-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
                         <p>pide presupuesto</p>
                     </div>
                 </li>
             </ul>
         </div>
+        
+        <div id="all-info-cards-list" class="info-cards all-list">
+            <ul class="all info-cards-list">
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/Vivienda.svg" alt="Vivienda">
+                        </div>
+                        <div class="title-card">
+                            <h3>Reforma integral</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Dejamos como nuevas todas y cada de las áreas del hogar</p>
+                    </div>
+                    <div id="reforma-integral-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/Iluminacion.svg" alt="Bombilla Iluminación">
+                        </div>
+                        <div class="title-card">
+                            <h3>Electricidad</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Junto con materiales de alta calidad le damos luz a tus espacios</p>
+                    </div>
+                    <div id="electricidad-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/Pintura.svg" alt="Brocha Pintura">
+                        </div>
+                        <div class="title-card">
+                            <h3>Pintura</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>¿Hace cuánto que no re-pintas tu casa? Se verá como nueva</p>
+                    </div>
+                    <div id="pintura-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/Paredes y Suelos.svg" alt="Paredes y Suelos">
+                        </div>
+                        <div class="title-card">
+                            <h3>Paredes y suelos</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Colocamos azulejos, parquets, porcelanatos y demás tipos</p>
+                    </div>
+                    <div id="paredes-suelos-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/albañileria.svg" alt="Paleta Albañil">
+                        </div>
+                        <div class="title-card">
+                            <h3>Albañilería</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Junto con materiales de alta calidad le damos luz a tus espacios</p>
+                    </div>
+                    <div id="albañileria-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/fontaneria.svg" alt="tuberías fontaneria">
+                        </div>
+                        <div class="title-card">
+                            <h3>Fontanería</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Dejamos como nuevas todas y cada de las áreas del hogar</p>
+                    </div>
+                    <div id="fontaneria-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/tarimas.svg" alt="Tarima de calidad">
+                        </div>
+                        <div class="title-card">
+                            <h3>Tarima</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Junto con materiales de alta calidad le damos luz a tus espacios</p>
+                    </div>
+                    <div id="tarima-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/carpinteria.svg" alt="Sierra para carpintería">
+                        </div>
+                        <div class="title-card">
+                            <h3>Carpintería</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>¿Hace cuánto que no re-pintas tu casa? Se verá como nueva</p>
+                    </div>
+                    <div id="carpinteria-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/carpinteria-aluminio.svg" alt="Radial para aluminio">
+                        </div>
+                        <div class="title-card">
+                            <h3>Carpintería aluminio</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Colocamos azulejos, parquets, porcelanatos y demás tipos</p>
+                    </div>
+                    <div id="carpinteria-aluminio-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/aire-acondicionado.svg" alt="Aire acondicionado">
+                        </div>
+                        <div class="title-card">
+                            <h3>Aire acondicionado</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Dejamos como nuevas todas y cada de las áreas del hogar</p>
+                    </div>
+                    <div id="aire-acondicionado-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/trabajos-en-altura.svg" alt="Bola Demolición">
+                        </div>
+                        <div class="title-card">
+                            <h3>Trabajos en altura</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Junto con materiales de alta calidad le damos luz a tus espacios</p>
+                    </div>
+                    <div id="trabajos-altura-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/mantenimiento-comunidades.svg" alt="Comunidad de vecinos">
+                        </div>
+                        <div class="title-card">
+                            <h3>Comunidades de vecinos</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>¿Hace cuánto que no re-pintas tu casa? Se verá como nueva</p>
+                    </div>
+                    <div id="comunidades-vecinos-btn" class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+                <li class="info-card">
+                    <div class="intro-info-card">
+                        <div class="img-card">
+                            <img src="img/svg/iconos-servicios/Mantenimiento.svg" alt="Mantenimiento">
+                        </div>
+                        <div class="title-card">
+                            <h3>Mantenimientos</h3>
+                        </div>
+                    </div>
+                    <div class="subtitle subtitle-card">
+                        <p>Colocamos azulejos, parquets, porcelanatos y demás tipos</p>
+                    </div>
+                    <div class="btn btn-primario btn-card" onclick="toggleForm(); formRestraining(this.id);">
+                        <p>pide presupuesto</p>
+                    </div>
+                </li>
+            </ul>
+            <img onclick="toggleList();" class="cross-close" src="img/svg/close-cross.svg" alt="Cross Close">
+        </div>
         <div class="ver-mas mid-btn">
-             <div class="btn btn-secundario"><a href="#">Ver todas</a></div>
+             <div class="btn btn-secundario" onclick="toggleList();">
+                 <p>Ver todas</p>
+             </div>
         </div>
     </section>
+
     
-    <section class="dark no-bottom">
+    
+    <section class="dark no-bottom why">
         <div class="section-content why">
             <div class="left-side-section">
                 <div class="section-title">
@@ -442,9 +472,10 @@
     </section>
 
 
-    <section class="light mt-15">
+    <section class="light galeria-trabajos mt-15">
+        <a name="galeria-trabajos"></a>
         <div class="section-title house-dec">
-            <h2><a name="galeria-trabajos">Galería de trabajos</a></h2>
+            <h2>Galería de trabajos</h2>
         </div>
             <div class="splide">
                 <div class="splide__track">
@@ -470,20 +501,21 @@
                 </div>
             </div>
         <div class="mid-btn">
-            <div class="btn btn-primario dark" onclick="toggleForm();">
+            <div class="btn btn-primario dark" onclick="toggleForm(); formRestraining(this.id);">
                 <p>pide presupuesto</p>
             </div>
         </div>
     </section>
 
-    <section class="dark">
-        <div class="section-content about-us container">
+    <section class="dark sobre-nosotros">
+        <a name="sobre-nosotros"></a>
+        <div class="section-content sobre-nosotros container">
             <div class="left-side-section img">
                  <img src="img/svg/IlustracionSobreNosotros.svg" alt="Obras Ilustración">
             </div>
             <div class="right-side-section">
                 <div class="section-title">
-                    <h2><a name="sobre-nosotros">Sobre nosotros</a></h2>
+                    <h2>Sobre nosotros</h2>
                 </div>
                 <div class="section-description">
                     <p><span class="bold">Somos</span> una pequeña empresa de <span class="highlight">profesionales</span> unidos por el trabajo, buscando siempre la mejora continua para lograr <span class="highlight">nuestro objetivo que es el bienestar y la satisfacción del cliente</span>.</p><br>
@@ -630,9 +662,10 @@
         </div>
     </section>
 
-    <section class="light">
+    <section class="light contacto">
+        <a name="contacto"></a>
         <div class="section-title">
-            <h2><a name="contacto">¿Dudas?¿Sugerencias?</a></h2>
+            <h2>¿Dudas?¿Sugerencias?</h2>
         </div>
         <div class="section-content contact-form container">
             <div class="formBx">
@@ -667,7 +700,7 @@
                 </div>
                 <nav class="section-content-footer">
                     <a href="tel:">(+34) 659 60 10 39</a>
-                    <a href="#">info@grupoloal.es</a>
+                    <a href="email:info@grupoloal.es">info@grupoloal.es</a>
                     <a href="#">123Park, Madrid</a>
                 </nav>
             </div>
@@ -675,10 +708,10 @@
             <div class="section-footer menu-footer">
                 <div class="section-title-footer">Menú</div>
                 <nav class="section-content-footer">
-                    <a href="#">Sobre Nosotros</a>
-                    <a href="#">Servicios</a>
-                    <a href="#">Galería de trabajos</a>
-                    <a href="#">Contacto</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#galeria-trabajos">Galería de trabajos</a>
+                     <a href="#sobre-nosotros">Sobre Nosotros</a>
+                    <a href="#contacto">Contacto</a>
                 </nav>
             </div>
             <div class="section-footer legal-footer">
@@ -722,6 +755,12 @@
         </div>
 
     </footer>
+
+    <div id="floating-btn-wrapper" class="floating-btn-wrapper">
+        <div id="floating-btn" class="btn special-btn floating-btn" onclick="toggleForm(); formRestraining(this.id);">
+            <p>pide presupuesto</p>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
